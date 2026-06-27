@@ -1,0 +1,20 @@
+# Version control ignore rules for Cooking Assistant
+
+# Python backend ignores
+backend/.venv/
+backend/__pycache__/
+backend/sessions.db
+backend/sessions.db-journal
+backend/*.pyc
+
+# Node/React frontend ignores
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
+
+# General OS & Editor ignores
+.DS_Store
+.vscode/
+.idea/
+.venv/
+*.log
