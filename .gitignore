@@ -18,3 +18,5 @@ frontend/.eslintcache
 .idea/
 .venv/
 *.log
+.env
+

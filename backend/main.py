@@ -3,8 +3,13 @@ from fastapi import FastAPI, HTTPException, Header, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional
+from dotenv import load_dotenv
 import db
 import ai
+
+# Load environment variables
+load_dotenv(dotenv_path="../.env")
+load_dotenv()
 
 app = FastAPI(title="Chef Assist Backend API")
 
