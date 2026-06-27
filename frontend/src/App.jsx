@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || (window.location.origin + '/api');
 
 // A simple and robust Markdown-to-HTML parser function to render cooking guides beautifully
 const parseMarkdown = (text) => {

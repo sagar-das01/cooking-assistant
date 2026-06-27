@@ -106,6 +106,12 @@ def send_message(
         "session": final_session
     }
 
+# Serve frontend static files if dist folder exists (production build)
+if os.path.exists("dist"):
+    from fastapi.staticfiles import StaticFiles
+    app.mount("/", StaticFiles(directory="dist", html=True), name="static")
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+
